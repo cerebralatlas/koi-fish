@@ -1,6 +1,6 @@
 {
   "name": "@cerebralatlas/koi-fish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI版电子木鱼 - 敲击空格播放木鱼声并累计功德",
   "type": "module",
   "main": "index.js",
