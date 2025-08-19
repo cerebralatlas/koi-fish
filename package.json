@@ -1,5 +1,5 @@
 {
-  "name": "koi-fish",
+  "name": "@cerebralatlas/koi-fish",
   "version": "1.0.0",
   "description": "CLI版电子木鱼 - 敲击空格播放木鱼声并累计功德",
   "type": "module",
@@ -32,6 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/koi-fish.git"
+    "url": "https://github.com/cerebralatlas/koi-fish.git"
   }
 }
