@@ -1,0 +1,37 @@
+{
+  "name": "koi-fish",
+  "version": "1.0.0",
+  "description": "CLI版电子木鱼 - 敲击空格播放木鱼声并累计功德",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "koi-fish": "./bin/koi-fish.js"
+  },
+  "scripts": {
+    "start": "node bin/koi-fish.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "木鱼",
+    "electronic",
+    "merit",
+    "功德",
+    "terminal",
+    "sound"
+  ],
+  "author": "Luke",
+  "license": "MIT",
+  "dependencies": {
+    "keypress": "^0.2.1",
+    "chalk": "^4.1.2",
+    "figlet": "^1.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/koi-fish.git"
+  }
+}

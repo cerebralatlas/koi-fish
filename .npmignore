@@ -1,0 +1,19 @@
+# 开发文件
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# 测试文件
+test/
+tests/
+*.test.js
+
+# 文档
+docs/
+*.md
+!README.md
+
+# 临时文件
+tmp/
+temp/
