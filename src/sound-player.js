@@ -25,7 +25,7 @@ class SoundPlayer {
   }
 
   playSound() {
-    // 使用多种方式尝试播放声音
+    // 使用多种方式尝试播放声音，有优雅的错误处理
     this.playSystemBeep() || this.playTerminalBeep() || this.playVisualFeedback();
   }
 
@@ -35,18 +35,47 @@ class SoundPlayer {
       
       if (platform === 'linux') {
         // Linux: 尝试使用beep命令
-        spawn('beep', ['-f', '800', '-l', '100'], { stdio: 'ignore' });
+        const beepProcess = spawn('beep', ['-f', '800', '-l', '100'], { 
+          stdio: 'ignore',
+          detached: false 
+        });
+        
+        // 添加错误处理，防止程序崩溃
+        beepProcess.on('error', (error) => {
+          // 静默处理错误，不让其传播到主进程
+        });
+        
+        // 即使spawn失败，也不阻塞主进程
         return true;
+        
       } else if (platform === 'darwin') {
         // macOS: 使用say命令播放音效
-        spawn('say', ['-v', 'Bells', '咚'], { stdio: 'ignore' });
+        const sayProcess = spawn('say', ['-v', 'Bells', '咚'], { 
+          stdio: 'ignore',
+          detached: false 
+        });
+        
+        sayProcess.on('error', (error) => {
+          // 静默处理错误
+        });
+        
         return true;
+        
       } else if (platform === 'win32') {
         // Windows: 使用echo命令发出beep
-        spawn('cmd', ['/c', 'echo \x07'], { stdio: 'ignore' });
+        const cmdProcess = spawn('cmd', ['/c', 'echo \x07'], { 
+          stdio: 'ignore',
+          detached: false 
+        });
+        
+        cmdProcess.on('error', (error) => {
+          // 静默处理错误
+        });
+        
         return true;
       }
     } catch (error) {
+      // 如果spawn本身失败，返回false让其他方法接管
       return false;
     }
     return false;

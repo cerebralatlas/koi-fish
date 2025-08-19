@@ -79,7 +79,7 @@ class KoiFish {
     });
   }
 
-  async hitWoodenFish() {
+  hitWoodenFish() {
     // 播放木鱼声
     this.soundPlayer.playSound();
     
