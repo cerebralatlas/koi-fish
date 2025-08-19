@@ -15,7 +15,7 @@
 
 ### 全局安装
 ```bash
-npm install -g koi-fish
+npm i @cerebralatlas/koi-fish -g
 ```
 
 ### 本地开发
