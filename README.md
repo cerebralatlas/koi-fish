@@ -20,7 +20,7 @@ npm i @cerebralatlas/koi-fish -g
 
 ### 本地开发
 ```bash
-git clone <repository-url>
+git clone git@github.com:cerebralatlas/koi-fish.git
 cd koi-fish
 npm install
 npm start
@@ -98,7 +98,7 @@ koi-fish
 
 ### 取消全局链接
 ```bash
-npm unlink -g koi-fish
+npm unlink -g @cerebralatlas/koi-fish
 ```
 
 ## 🤝 贡献
